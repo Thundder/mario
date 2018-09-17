@@ -13,47 +13,26 @@ void HandleEvent(SDL_Event event)
     switch (event.key.keysym.sym)
     {
     case SDLK_ESCAPE:
+	//quand on appuie sur ECHAP pour quitter
+      	gameover = 1;
+      	break;  
     case SDLK_q:
-      gameover = 1;
-      break;
-    case SDLK_SPACE:
-      if (!launched)
-      {
-        if (reset)
-        {
-          launched = 1;
-          reset = 0;
-          angle = PI - launcherDirection * PI / LAUNCHER_DIV;
-          dX = VELOCITY * cos(angle);
-          dY = -VELOCITY * sin(angle);
-        }
-        else
-          centralizeBubble();
-      }
-      break;
-    case SDLK_LEFT:
-      if (launcherRect.y >= LAUNCHER_HEIGHT)
-      {
-        launcherRect.y -= LAUNCHER_HEIGHT;
-        launcherDirection-=1;
-      }
-      if (char1Rect.y >= CHAR1_HEIGHT)
-      {
-	char1Rect.y -= CHAR1_HEIGHT;
-      }
-      break;
-    case SDLK_RIGHT:
-      if (launcherRect.y <= 43 * LAUNCHER_HEIGHT)
-      {
-        launcherRect.y += LAUNCHER_HEIGHT;
-        launcherDirection+=1;
-      }
-      if (char1Rect.y <= 87 * CHAR1_HEIGHT)
-      {
-	char1Rect.y += CHAR1_HEIGHT;
-      }
-      break;
-    }
-    break;
-  }
+	//quand on appuie sur Q pour quitter
+      	gameover = 1;
+      	break;
+	case SDLK_SPACE:
+      		//quand on appuie sur espace
+		    
+      		break;
+    	case SDLK_LEFT:
+      		//quand on va à gauche
+		    
+      		break;
+    	case SDLK_RIGHT:
+      		//quand on va à droite
+		    
+      		break;
+    	}
+    	break;
+  	}
 }
