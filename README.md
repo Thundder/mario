@@ -1,4 +1,4 @@
-# l2project
+# mario
 Voici notre projet de deuxième année de licence à la Faculté des Sciences et Technologies en Licence Informatique.
 Nous devons créer un jeu de notre choix en C.
 Pour notre part nous avons choisi de faire un Mario Bros.
